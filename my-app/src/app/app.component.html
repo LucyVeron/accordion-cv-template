@@ -1,6 +1,49 @@
-<!-- <mat-card>
-  <mat-card-header>
-    <mat-card-title>Lucy Veron</mat-card-title>
-    <mat-card-subtitle>Frontend Developer</mat-card-subtitle>
-  </mat-card-header>
-</mat-card> -->
+<mat-vertical-stepper #stepper>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Intro</ng-template>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Lucy Veron</mat-card-title>
+          <mat-card-subtitle>Frontend Developer</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="../assets/main.jpg" alt="main photo">
+        <mat-card-content>
+          <p>
+            Frontend developer working looking for a new challenge
+          </p>
+        </mat-card-content>
+      </mat-card>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <form>
+      <ng-template matStepLabel>Experience</ng-template>
+      <mat-list>
+        <mat-list-item *ngFor="let folder of folders;">
+          <mat-icon mat-list-icon>grade</mat-icon>
+          <h3 mat-line>{{folder.name}}</h3>
+          <strong style="font-weight:500;" mat-line> {{folder.dates}} </strong>
+          <small mat-line>• Work on teams</small>
+          <small mat-line>• Built apps</small>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
