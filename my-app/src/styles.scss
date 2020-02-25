@@ -1,5 +1,19 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 
 html {
-    font-family: roboto, sans-serif;
+  font-family: roboto, sans-serif;
+  background-image: url('./assets/background.jpg');
+  background-size: 120vw;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+strong {
+  font-weight: bold !important;
+}
+.flex {
+  display: flex;
 }

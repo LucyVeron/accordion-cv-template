@@ -1,105 +1,122 @@
 <mat-vertical-stepper #stepper>
   <mat-step>
     <ng-template matStepLabel>Intro</ng-template>
-    <mat-card>
+    <mat-card class="mat-elevation-z5">
       <mat-card-header>
         <mat-card-title>Lucy Veron</mat-card-title>
         <mat-card-subtitle>Frontend Developer</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src="../assets/main.jpg" alt="main photo">
       <mat-card-content>
-        <p>
-          Frontend developer working looking for a new challenge
-        </p>
+        <p>Fish looking for a new pond</p>
       </mat-card-content>
     </mat-card>
-    <div>
-      <button mat-button matStepperNext>Next</button>
-    </div>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Work Experience</ng-template>
+    <ng-template matStepLabel>Work</ng-template>
     <mat-list>
-      <mat-list-item>
-        <h3 mat-line>Software Engineer - telent GmbH</h3>
-        <strong mat-line> June 2018 - present </strong>
-        <small mat-line>• Development of device-management IoT platform</small>
-        <small mat-line>• Use of Agile practices</small>
-        <small mat-line>• Tools: git, Angular 8, rxjs, ES6/Typescript, Bootstrap, Angular Material, SCSS</small>
-      </mat-list-item>
+      <div>
+        <img src="../assets/logo_rm_telent.jpg">
+        <mat-list-item>
+          <h3 mat-line>Software Engineer - telent GmbH (Backnang, Germany)</h3>
+          <strong mat-line> June 2018 - present </strong>
+          <p mat-line>+ Developing management platform for IoT sensors</p>
+          <p mat-line>+ Using Agile methodology</p>
+          <p mat-line>+ Tools: git, Angular 8, rxjs, Typescript, Bootstrap, Angular Material, SCSS</p>
+        </mat-list-item>
+      </div>
       <mat-divider></mat-divider>
-      <mat-list-item>
-        <h3 mat-line>Junior Software Engineer - Diconium Digital Solutions GmbH</h3>
-        <strong mat-line> June 2017 - June 2018 </strong>
-        <small mat-line>• HTML and CSS templating and JQuery form validation for e-commerce shop</small>
-        <small mat-line>• Creation of Angular 4 dashboard for insurance company</small>
-        <small mat-line>• Design, implementation and testing for global automotive brand</small>
-        <small mat-line>• Tools: Typescript, Angular (1 through 8), jQuery, npm, git, Karma, Jest</small>
-      </mat-list-item>
+      <div>
+        <img src="../assets/diconium.png">
+        <mat-list-item>
+          <h3 mat-line>Junior Software Engineer - Diconium Digital Solutions GmbH (Stuttgart, Germany)</h3>
+          <strong mat-line> June 2017 - June 2018 </strong>
+          <p mat-line>+ HTML and CSS templating and JQuery form validation for e-commerce shop</p>
+          <p mat-line>+ Creation of Angular 4 dashboard for insurance company</p>
+          <p mat-line>+ Design, implementation and testing for global automotive brand</p>
+          <p mat-line>+ Tools: Typescript, Angular (1 through 8), jQuery, npm, git, Karma, Jest</p>
+        </mat-list-item>
+      </div>
       <mat-divider></mat-divider>
-      <mat-list-item>
-        <h3 mat-line>Freelance Fullstack Developer</h3>
-        <strong mat-line> Dec 2016 - Mar 2017 </strong>
-        <small mat-line>• Web development with native HTML, CSS, and Javascript</small>
-        <small mat-line>• Served with Flask and Jinja2</small>
-        <small mat-line>• <a href="http://newageamericansband.com">Link to website</a>
-        </small>
-      </mat-list-item>
+      <div>
+        <mat-icon>home</mat-icon>
+        <mat-list-item>
+          <h3 mat-line>Freelance Fullstack Developer - Independent (Backnang, Germany)</h3>
+          <strong mat-line> Dec 2016 - Mar 2017 </strong>
+          <p mat-line>+ Built website for Chicago music group</p>
+          <p mat-line>+ Hosted on Godaddy Linux server</p>
+          <p mat-line>+ Tools: Flask, Jinja2, Apache, HTML, CSS</p>
+          <p mat-line>
+            <a href="http://newageamericansband.com">
+              <button class="site-link" mat-stroked-button color="warn">
+                LINK TO SITE
+              </button>
+            </a>
+          </p>
+        </mat-list-item>
+      </div>
     </mat-list>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Internships</ng-template>
     <mat-list>
-      <mat-list-item>
-        <h3 mat-line>RF Engineering Software Tools - Gogo LLC</h3>
-        <strong mat-line> June 2016 - Aug 2016 </strong>
-        <small mat-line>• Designed C program to optimize flight simulator accuracy and satellite usage</small>
-        <small mat-line>• Implemented KML script to display airport database and daylight saving algorithms in Google Earth</small>
-      </mat-list-item>
+      <div>
+        <img src="../assets/Gogo.jpg" alt="Gogo LLC">
+        <mat-list-item>
+          <h3 mat-line>RF Engineering Software Tools - Gogo LLC (Chicago, USA)</h3>
+          <strong mat-line> June 2016 - Aug 2016 </strong>
+          <p mat-line>+ Designed C program to optimize flight simulator accuracy and satellite usage</p>
+          <p mat-line>+ Wrote KML script to airports and daylight saving times in Google Earth</p>
+        </mat-list-item>
+      </div>
       <mat-divider></mat-divider>
-      <mat-list-item>
-        <h3 mat-line>IT Techincal Intern</h3>
-        <strong mat-line> June 2015 - Aug 2015 </strong>
-        <small mat-line>• Customized Excel VBA application to apply HTML formatting to Outlook emails</small>
-        <small mat-line>• Performed program installations and machine decommissions</small>
-      </mat-list-item>
+      <div>
+        <img src="../assets/northrop.png">
+        <mat-list-item>
+          <h3 mat-line>IT Techincal Intern - Northrop Grumman (Rolling Meadows, USA)</h3>
+          <strong mat-line> June 2015 - Aug 2015 </strong>
+          <p mat-line>+ Customized Excel VBA application to apply HTML formatting to Outlook emails</p>
+          <p mat-line>+ Performed program installations and machine decommissions</p>
+        </mat-list-item>
+      </div>
     </mat-list>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Everything else</ng-template>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Education</mat-card-title>
-        <mat-card-subtitle>B.Sc. Electrical and Computer Engineering</mat-card-subtitle>
-      </mat-card-header>
-      <span>Southern Illinois University</span>
-      <span>Fall 2016</span>
-      <span>Carbondale, IL, United States</span>
+    <ng-template matStepLabel>Education</ng-template>
+    <mat-card class="mat-elevation-z5">
+      <div class="flex">
+        <mat-icon>school</mat-icon>
+        <mat-card-header>
+          <mat-card-title>
+            <span>B.Sc. Electrical and Computer Engineering</span>
+          </mat-card-title>
+          <mat-card-subtitle>Southern Illinois University</mat-card-subtitle>
+        </mat-card-header>
+      </div>
       <mat-card-content>
-        <p>
-          Frontend developer working looking for a new challenge
-        </p>
+        <p>Fall 2016</p>
+        <p>Carbondale, Illinois</p>
+        <p>USA</p>
       </mat-card-content>
     </mat-card>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
+    <ng-template matStepLabel>Connect</ng-template>
+    <mat-chip-list>
+      <mat-chip>+49 163 9101630</mat-chip>
+      <mat-chip color="primary" selected>lucymveron@gmail.com</mat-chip>
+      <mat-chip color="accent" selected>
+        <a href="https://github.com/LucyVeron">
+          <span>github.com/LucyVeron</span>
+          <mat-icon class="arrow">arrow_forward</mat-icon>
+        </a>
+      </mat-chip>
+      <mat-chip color="warn" selected>
+        <a href="https://linkedin.com/in/lucymarieveron">
+          <span>linkedin.com/in/lucymarieveron</span>
+          <mat-icon class="arrow">arrow_forward</mat-icon>
+        </a>
+      </mat-chip>
+    </mat-chip-list>
   </mat-step>
 </mat-vertical-stepper>
