@@ -1,42 +1,98 @@
 <mat-vertical-stepper #stepper>
   <mat-step>
-    <form>
-      <ng-template matStepLabel>Intro</ng-template>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Lucy Veron</mat-card-title>
-          <mat-card-subtitle>Frontend Developer</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../assets/main.jpg" alt="main photo">
-        <mat-card-content>
-          <p>
-            Frontend developer working looking for a new challenge
-          </p>
-        </mat-card-content>
-      </mat-card>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+    <ng-template matStepLabel>Intro</ng-template>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Lucy Veron</mat-card-title>
+        <mat-card-subtitle>Frontend Developer</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="../assets/main.jpg" alt="main photo">
+      <mat-card-content>
+        <p>
+          Frontend developer working looking for a new challenge
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <div>
+      <button mat-button matStepperNext>Next</button>
+    </div>
   </mat-step>
   <mat-step>
-    <form>
-      <ng-template matStepLabel>Experience</ng-template>
-      <mat-list>
-        <mat-list-item *ngFor="let folder of folders;">
-          <mat-icon mat-list-icon>grade</mat-icon>
-          <h3 mat-line>{{folder.name}}</h3>
-          <strong style="font-weight:500;" mat-line> {{folder.dates}} </strong>
-          <small mat-line>• Work on teams</small>
-          <small mat-line>• Built apps</small>
-          <mat-divider></mat-divider>
-        </mat-list-item>
-      </mat-list>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
+    <ng-template matStepLabel>Work Experience</ng-template>
+    <mat-list>
+      <mat-list-item>
+        <h3 mat-line>Software Engineer - telent GmbH</h3>
+        <strong mat-line> June 2018 - present </strong>
+        <small mat-line>• Development of device-management IoT platform</small>
+        <small mat-line>• Use of Agile practices</small>
+        <small mat-line>• Tools: git, Angular 8, rxjs, ES6/Typescript, Bootstrap, Angular Material, SCSS</small>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <h3 mat-line>Junior Software Engineer - Diconium Digital Solutions GmbH</h3>
+        <strong mat-line> June 2017 - June 2018 </strong>
+        <small mat-line>• HTML and CSS templating and JQuery form validation for e-commerce shop</small>
+        <small mat-line>• Creation of Angular 4 dashboard for insurance company</small>
+        <small mat-line>• Design, implementation and testing for global automotive brand</small>
+        <small mat-line>• Tools: Typescript, Angular (1 through 8), jQuery, npm, git, Karma, Jest</small>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <h3 mat-line>Freelance Fullstack Developer</h3>
+        <strong mat-line> Dec 2016 - Mar 2017 </strong>
+        <small mat-line>• Web development with native HTML, CSS, and Javascript</small>
+        <small mat-line>• Served with Flask and Jinja2</small>
+        <small mat-line>• <a href="http://newageamericansband.com">Link to website</a>
+        </small>
+      </mat-list-item>
+    </mat-list>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Internships</ng-template>
+    <mat-list>
+      <mat-list-item>
+        <h3 mat-line>RF Engineering Software Tools - Gogo LLC</h3>
+        <strong mat-line> June 2016 - Aug 2016 </strong>
+        <small mat-line>• Designed C program to optimize flight simulator accuracy and satellite usage</small>
+        <small mat-line>• Implemented KML script to display airport database and daylight saving algorithms in Google Earth</small>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <h3 mat-line>IT Techincal Intern</h3>
+        <strong mat-line> June 2015 - Aug 2015 </strong>
+        <small mat-line>• Customized Excel VBA application to apply HTML formatting to Outlook emails</small>
+        <small mat-line>• Performed program installations and machine decommissions</small>
+      </mat-list-item>
+    </mat-list>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Everything else</ng-template>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Education</mat-card-title>
+        <mat-card-subtitle>B.Sc. Electrical and Computer Engineering</mat-card-subtitle>
+      </mat-card-header>
+      <span>Southern Illinois University</span>
+      <span>Fall 2016</span>
+      <span>Carbondale, IL, United States</span>
+      <mat-card-content>
+        <p>
+          Frontend developer working looking for a new challenge
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </div>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Done</ng-template>
