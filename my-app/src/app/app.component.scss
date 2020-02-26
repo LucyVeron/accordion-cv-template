@@ -16,8 +16,10 @@ mat-list {
     }
   }
   & .site-link {
-    margin-left: 0px;
-    margin-top: 20px;
+    width: 100%;
+    & a {
+      margin: 10px auto;
+    }
   }
 }
 mat-chip-list {

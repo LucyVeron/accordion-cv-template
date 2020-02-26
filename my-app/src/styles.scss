@@ -2,7 +2,7 @@
 
 html {
   font-family: roboto, sans-serif;
-  background-image: url('./assets/background.jpg');
+  background-image: url("./assets/background.jpg");
   background-size: 120vw;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -16,4 +16,7 @@ strong {
 }
 .flex {
   display: flex;
+}
+.full-width {
+  width: 100%;
 }

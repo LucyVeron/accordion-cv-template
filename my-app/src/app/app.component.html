@@ -15,68 +15,34 @@
   <mat-step>
     <ng-template matStepLabel>Work</ng-template>
     <mat-list>
-      <div>
-        <img src="../assets/logo_rm_telent.jpg">
+      <div *ngFor="let job of jobs">
+        <img src="{{job.logo}}">
         <mat-list-item>
-          <h3 mat-line>Software Engineer - telent GmbH (Backnang, Germany)</h3>
-          <strong mat-line> June 2018 - present </strong>
-          <p mat-line>+ Developing management platform for IoT sensors</p>
-          <p mat-line>+ Using Agile methodology</p>
-          <p mat-line>+ Tools: git, Angular 8, rxjs, Typescript, Bootstrap, Angular Material, SCSS</p>
+          <h3 mat-line>{{job.company}}</h3>
+          <strong mat-line>{{job.dates}}</strong>
+          <p mat-line *ngFor="let task of job.tasks">+ {{task}}</p>
+          <mat-divider></mat-divider>
         </mat-list-item>
       </div>
-      <mat-divider></mat-divider>
-      <div>
-        <img src="../assets/diconium.png">
-        <mat-list-item>
-          <h3 mat-line>Junior Software Engineer - Diconium Digital Solutions GmbH (Stuttgart, Germany)</h3>
-          <strong mat-line> June 2017 - June 2018 </strong>
-          <p mat-line>+ HTML and CSS templating and JQuery form validation for e-commerce shop</p>
-          <p mat-line>+ Creation of Angular 4 dashboard for insurance company</p>
-          <p mat-line>+ Design, implementation and testing for global automotive brand</p>
-          <p mat-line>+ Tools: Typescript, Angular (1 through 8), jQuery, npm, git, Karma, Jest</p>
-        </mat-list-item>
-      </div>
-      <mat-divider></mat-divider>
-      <div>
-        <mat-icon>home</mat-icon>
-        <mat-list-item>
-          <h3 mat-line>Freelance Fullstack Developer - Independent (Backnang, Germany)</h3>
-          <strong mat-line> Dec 2016 - Mar 2017 </strong>
-          <p mat-line>+ Built website for Chicago music group</p>
-          <p mat-line>+ Hosted on Godaddy Linux server</p>
-          <p mat-line>+ Tools: Flask, Jinja2, Apache, HTML, CSS</p>
-          <p mat-line>
-            <a href="http://newageamericansband.com">
-              <button class="site-link" mat-stroked-button color="warn">
-                LINK TO SITE
-              </button>
-            </a>
-          </p>
-        </mat-list-item>
+      <div class="site-link">
+        <a href="http://newageamericansband.com">
+          <button mat-stroked-button color="warn">
+            LINK TO FREELANCE SITE
+          </button>
+        </a>
       </div>
     </mat-list>
   </mat-step>
   <mat-step>
     <ng-template matStepLabel>Internships</ng-template>
     <mat-list>
-      <div>
-        <img src="../assets/Gogo.jpg" alt="Gogo LLC">
+      <div *ngFor="let intern of internships">
+        <img src="{{intern.logo}}">
         <mat-list-item>
-          <h3 mat-line>RF Engineering Software Tools - Gogo LLC (Chicago, USA)</h3>
-          <strong mat-line> June 2016 - Aug 2016 </strong>
-          <p mat-line>+ Designed C program to optimize flight simulator accuracy and satellite usage</p>
-          <p mat-line>+ Wrote KML script to airports and daylight saving times in Google Earth</p>
-        </mat-list-item>
-      </div>
-      <mat-divider></mat-divider>
-      <div>
-        <img src="../assets/northrop.png">
-        <mat-list-item>
-          <h3 mat-line>IT Techincal Intern - Northrop Grumman (Rolling Meadows, USA)</h3>
-          <strong mat-line> June 2015 - Aug 2015 </strong>
-          <p mat-line>+ Customized Excel VBA application to apply HTML formatting to Outlook emails</p>
-          <p mat-line>+ Performed program installations and machine decommissions</p>
+          <h3 mat-line>{{intern.company}}</h3>
+          <strong mat-line>{{intern.dates}}</strong>
+          <p mat-line *ngFor="let task of intern.tasks">+ {{task}}</p>
+          <mat-divider></mat-divider>
         </mat-list-item>
       </div>
     </mat-list>
