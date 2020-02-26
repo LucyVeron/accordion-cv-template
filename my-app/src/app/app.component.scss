@@ -1,5 +1,23 @@
+.arrow {
+  transform: rotate(315deg);
+}
+.mat-step-header {
+  font-size: 20px;
+}
 mat-card {
-  width: 600px;
+  width: 550px;
+}
+mat-chip {
+  & a {
+    display: flex;
+    align-items: center;
+    & span {
+      margin-right: 5px;
+    }
+  }
+}
+mat-chip-list {
+  margin: 10px;
 }
 mat-list {
   & div {
@@ -15,22 +33,14 @@ mat-list {
       line-height: 23px;
     }
   }
-  & .site-link {
-    width: 100%;
-    & a {
-      margin: 10px auto;
-    }
+  & p {
+    white-space: pre-line !important;
   }
-}
-mat-chip-list {
-  margin: 10px;
-}
-mat-chip {
-  & a {
-    display: flex;
-    align-items: center;
-    & span {
-      margin-right: 5px;
+  & .site-link {
+    margin-top: 7px;
+    & mat-icon {
+      width: unset;
+      font-size: 20px;
     }
   }
 }
@@ -40,9 +50,19 @@ mat-vertical-stepper {
   border-radius: 5px;
   opacity: 0.9;
 }
-.mat-step-header {
-  font-size: 20px;
-}
-.arrow {
-  transform: rotate(315deg);
+@media only screen and (max-width: 800px) {
+  .site-link {
+    margin: 10px auto !important;
+  }
+  mat-card {
+    width: 60vw;
+  }
+  mat-list {
+    & div {
+      flex-direction: column;
+    }
+  }
+  mat-vertical-stepper {
+    width: 90vw;
+  }
 }

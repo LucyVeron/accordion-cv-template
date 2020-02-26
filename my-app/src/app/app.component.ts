@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 export interface Job {
+  id: string;
   logo: string;
   company: string;
   dates: string;
@@ -16,6 +17,7 @@ export class AppComponent {
 
   public jobs: Job[] = [
     {
+      id: 'telent',
       logo: '../assets/logo_rm_telent.jpg',
       company: 'Software Engineer - telent GmbH (Backnang, Germany)',
       dates: 'June 2018 - present',
@@ -26,6 +28,7 @@ export class AppComponent {
       ]
     },
     {
+      id: 'diconium',
       logo: '../assets/diconium.png',
       company: 'Junior Software Engineer - Diconium Digital Solutions GmbH (Stuttgart, Germany)',
       dates: 'June 2017 - June 2018',
@@ -37,6 +40,7 @@ export class AppComponent {
       ]
     },
     {
+      id: 'homeoffice',
       logo: '../assets/home.png',
       company: 'Freelance Fullstack Developer - Independent (Backnang, Germany)',
       dates: 'Dec 2016 - Mar 2017',
@@ -50,6 +54,7 @@ export class AppComponent {
 
   public internships: Job[] = [
     {
+      id: 'gogo',
       logo: '../assets/Gogo.jpg',
       company: 'RF Engineering Software Tools - Gogo LLC (Chicago, USA)',
       dates: 'June 2016 - Aug 2016',
@@ -59,6 +64,7 @@ export class AppComponent {
       ]
     },
     {
+      id: 'northrop',
       logo: '../assets/northrop.png',
       company: 'IT Techincal Intern - Northrop Grumman (Rolling Meadows, USA)',
       dates: 'June 2015 - Aug 2015',
