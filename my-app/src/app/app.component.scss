@@ -1,5 +1,16 @@
+#euMap, #usaMap {
+  height: 350px;
+  width: 100%;
+}
 .arrow {
   transform: rotate(315deg);
+}
+.maps {
+  display: flex;
+  flex-direction: row;
+  & mat-card {
+    margin: 1rem 0.5rem;
+  }
 }
 .mat-step-header {
   font-size: 20px;
@@ -24,7 +35,7 @@ mat-list {
     display: flex;
     align-items: center;
     & img {
-      width: 100px;
+      width: 200px;
     }
     & mat-icon {
       font-size: 59px;
@@ -45,12 +56,18 @@ mat-list {
   }
 }
 mat-vertical-stepper {
-  width: 800px;
+  width: 90vw;
   margin: auto;
   border-radius: 5px;
   opacity: 0.9;
+  & h3 {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 800px) {
+  .maps {
+    flex-direction: column;
+  }
   .site-link {
     margin: 10px auto !important;
   }

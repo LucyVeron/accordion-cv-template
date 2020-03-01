@@ -1,5 +1,5 @@
-<mat-vertical-stepper #stepper>
-  <mat-step>
+<mat-vertical-stepper (selectionChange)="onStepChange($event)">
+  <mat-step label="intro">
     <ng-template matStepLabel>Intro</ng-template>
     <mat-card class="mat-elevation-z10">
       <mat-card-header>
@@ -12,43 +12,19 @@
       </mat-card-content>
     </mat-card>
   </mat-step>
-  <mat-step>
+  <mat-step label="work">
     <ng-template matStepLabel>Work</ng-template>
-    <mat-list>
-      <div *ngFor="let job of jobs">
-        <img src="{{job.logo}}">
-        <mat-list-item>
-          <h3 mat-line>{{job.company}}</h3>
-          <strong mat-line>{{job.dates}}</strong>
-          <p mat-line *ngFor="let task of job.tasks">+ {{task}}</p>
-          <p class="site-link" mat-line *ngIf="job.id==='homeoffice'">
-            <a href="http://newageamericansband.com">
-              <button mat-raised-button color="primary">
-                LINK TO SITE
-                <mat-icon class="arrow">arrow_forward</mat-icon>
-              </button>
-            </a>
-          </p>
-          <mat-divider></mat-divider>
-        </mat-list-item>
-      </div>
-    </mat-list>
+    <h3>Where I've worked</h3>
+    <div class="maps">
+      <mat-card>
+        <div id="usaMap"></div>
+      </mat-card>
+      <mat-card>
+        <div id="euMap"></div>
+      </mat-card>
+    </div>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Internships</ng-template>
-    <mat-list>
-      <div *ngFor="let intern of internships">
-        <img src="{{intern.logo}}">
-        <mat-list-item>
-          <h3 mat-line>{{intern.company}}</h3>
-          <strong mat-line>{{intern.dates}}</strong>
-          <p mat-line *ngFor="let task of intern.tasks">+ {{task}}</p>
-          <mat-divider></mat-divider>
-        </mat-list-item>
-      </div>
-    </mat-list>
-  </mat-step>
-  <mat-step>
+  <mat-step label="education">
     <ng-template matStepLabel>Education</ng-template>
     <mat-card class="mat-elevation-z10">
       <div class="flex">
@@ -67,7 +43,7 @@
       </mat-card-content>
     </mat-card>
   </mat-step>
-  <mat-step>
+  <mat-step label="connect">
     <ng-template matStepLabel>Connect</ng-template>
     <mat-chip-list>
       <mat-chip>+49 163 9101630</mat-chip>
